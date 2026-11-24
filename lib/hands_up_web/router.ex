@@ -17,7 +17,8 @@ defmodule HandsUpWeb.Router do
   scope "/", HandsUpWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", HomeLive
+    live "/e/:code", EventLive
   end
 
   # Other scopes may use custom stacks.
